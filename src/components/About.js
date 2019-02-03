@@ -34,6 +34,9 @@ const About = () => (
           Hemp is rapidly expanding and there is little information on the best
           strategies and practices for growing hemp. Hemptations goal aims
           towards informing farmers of the best growing methods.
+          If you'd like to learn more information about growing hemp in Minnesota 
+          and the Industrial Hemp Program, please click below.<br></br>
+          <a href="https://www.mda.state.mn.us/plants/hemp" target="_blank"><button className="button is-secondary btn-why">Learn More</button></a>
         </p>
       </div>
     </div>
