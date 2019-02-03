@@ -24,7 +24,7 @@ export default class TextBox extends Component {
     }
     return <div style={this.props.style}>
         <p>{this.props.children}</p>
-        <input className={this.props.className} onChange={this.onChange} placeholder={this.placeholder} type={TextBoxType}></input>
+        <input className={this.props.className} onChange={this.onChange} placeholder={this.props.placeholder} type={TextBoxType}></input>
       </div>
   }
 }

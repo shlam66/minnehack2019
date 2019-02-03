@@ -64,6 +64,10 @@
   margin-bottom: 25px;
 }
 
+.contract-new-btn {
+  margin-bottom: 25px;
+}
+
 .contract-new-field {
   border: solid black 2px;
   border-radius: 5px;
@@ -72,3 +76,4 @@
   font-size: medium;
   font-weight: bolder;
 }
+
