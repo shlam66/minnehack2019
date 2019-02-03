@@ -1,66 +1,72 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 
-const Navbar = () => (
-  <nav class="navbar" role="navigation" aria-label="main navigation">
-    <div class="navbar-brand">
-      <a class="navbar-item" href="/">
-        <img
-          src="https://bulma.io/images/bulma-logo.png"
-          width="112"
-          height="28"
-          alt="Hemptation Logo"
-        />
-      </a>
+import HempLogo from '../assets/HemptationLogo.png'
 
-      <button
-        class="navbar-burger burger"
+const toggleMenu = e => {
+  e.target.classList.toggle('is-active')
+}
+
+const Navbar = () => (
+  <nav
+    className="navbar is-fixed-top"
+    role="navigation"
+    aria-label="main navigation"
+  >
+    <div className="navbar-brand">
+      <div className="navbar-item">
+        <img src={HempLogo} width="112" height="28" alt="Hemptation Logo" />
+      </div>
+
+      <div
+        className="navbar-burger burger"
         aria-label="menu"
         aria-expanded="false"
-        data-target="navbarBasicExample"
+        data-target="navbar"
+        onClick={toggleMenu}
       >
         <span aria-hidden="true" />
         <span aria-hidden="true" />
         <span aria-hidden="true" />
-      </button>
+      </div>
     </div>
 
-    <div id="navbarBasicExample" class="navbar-menu">
-      <div class="navbar-start">
-        <Link to="/" class="navbar-item">
+    <div id="navbar" className="navbar-menu">
+      <div className="navbar-start">
+        <Link to="/" className="navbar-item">
           Home
         </Link>
 
-        <Link to="/about" class="navbar-item">
+        <Link to="/about" className="navbar-item">
           Why Hemp?
         </Link>
 
-        <div class="navbar-item has-dropdown is-hoverable">
-          <Link to="#" class="navbar-link">
+        <div className="navbar-item has-dropdown is-hoverable">
+          <Link to="#" className="navbar-link">
             More
           </Link>
 
-          <div class="navbar-dropdown">
-            <Link to="/" class="navbar-item">
+          <div className="navbar-dropdown">
+            <Link to="/" className="navbar-item">
               About
             </Link>
-            <Link to="/" class="navbar-item">
+            <Link to="/" className="navbar-item">
               Jobs
             </Link>
-            <Link to="/" class="navbar-item">
+            <Link to="/" className="navbar-item">
               Contact
             </Link>
           </div>
         </div>
       </div>
 
-      <div class="navbar-end">
-        <div class="navbar-item">
-          <div class="buttons">
-            <button class="button is-primary">
+      <div className="navbar-end">
+        <div className="navbar-item">
+          <div className="buttons">
+            <button className="button is-primary">
               <strong>Sign up</strong>
             </button>
-            <button class="button is-light">Log in</button>
+            <button className="button is-light">Log in</button>
           </div>
         </div>
       </div>
