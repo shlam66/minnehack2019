@@ -24,10 +24,13 @@ class NewLog extends Component {
 
   submit = () => {
     const entry = {
-      datetime: this.state.date,
-      num_plants: this.state.plants,
-      strain: this.state.strain,
-      num_acres: this.state.acres
+      plantEntry: {
+        datetime: this.state.date,
+        num_plants: this.state.plants,
+        strain: this.state.strain,
+        num_acres: this.state.acres
+      },
+      harvestEntry: null
     }
     api.post('/log_entries', entry).then(res => {
       this.props.addlog()

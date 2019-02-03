@@ -2,7 +2,6 @@ import React, { Component } from 'react'
 import "./Components.css"
 import api from '../api'
 import { Link } from 'react-router-dom'
-import { Dropdown } from 'react-bulma-components/full'
 import { Form, Button } from 'react-bulma-components/full'
 
 class LogUpdate extends Component {
@@ -20,13 +19,16 @@ class LogUpdate extends Component {
     }
   
     submit = () => {
+        console.log(this.props.match.params.id)
+
       const entry = {
-        datetime: this.state.date,
-        num_plants: this.state.plants,
-        strain: this.state.strain,
-        num_acres: this.state.acres
+        harvestEntry: {
+            datetime: this.state.date,
+            pounds: this.state.pounds
+        }
       }
-      api.post('/log_entries', entry).then(res => {
+
+      api.patch(`/log_entries/${this.props.match.params.id}`, entry).then(res => {
         this.props.addlog()
         this.props.history.push('/logs')
       })
