@@ -46,7 +46,7 @@ const AppRouter = ({ onLogin, user, login, logout, fetchLogs, logEntries }) => (
         />
         <Route
           path="/logs/new"
-          render={props => <NewLog {...props} addLog={fetchLogs} />}
+          render={props => <NewLog {...props} addlog={fetchLogs} />}
         />
 
         <Route path="/data/" component={DataSets} />

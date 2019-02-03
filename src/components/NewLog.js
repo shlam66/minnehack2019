@@ -7,10 +7,9 @@ import { Form, Button } from 'react-bulma-components/full'
 
 class NewLog extends Component {
   state = {
-    selected: false,
+    strain: 'Elektra',
     date: '',
     plants: '',
-    strain: '',
     acres: ''
   }
 
@@ -18,20 +17,19 @@ class NewLog extends Component {
     this.setState({ [e.target.name]: e.target.value })
   }
 
-  onChange = selected => {
-    this.setState({ selected })
+  onChange = strain => {
+    this.setState({ strain })
   }
 
   submit = () => {
     const entry = {
-      id: 1,
       datetime: this.state.date,
       num_plants: this.state.plants,
       strain: this.state.strain,
       num_acres: this.state.acres
     }
     api.post('/log_entries', entry).then(res => {
-      this.props.addLog()
+      this.props.addlog()
       this.props.history.push('/logs')
     })
   }
@@ -70,16 +68,12 @@ class NewLog extends Component {
         <Form.Field>
           <Form.Label>Select the Strain:</Form.Label>
           <Form.Control>
-            <Dropdown
-              value={this.state.selected}
-              onChange={this.onChange}
-              {...this.props}
-            >
+            <Dropdown value={this.state.strain} onChange={this.onChange}>
               <Dropdown.Item value="elektra">Elektra</Dropdown.Item>
               <Dropdown.Item value="cherrywine">Cherry Wine</Dropdown.Item>
               <Dropdown.Item value="suverhaze">Suver Haze</Dropdown.Item>
               <Dropdown.Item value="cobbler">Cobbler</Dropdown.Item>
-            </Dropdown>{' '}
+            </Dropdown>
             <br />
           </Form.Control>
         </Form.Field>
