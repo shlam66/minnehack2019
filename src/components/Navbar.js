@@ -8,7 +8,7 @@ const toggleMenu = e => {
   document.querySelector('#navbar').classList.toggle('is-active')
 }
 
-const Navbar = () => (
+const Navbar = ({ user, logout }) => (
   <nav
     className="navbar is-fixed-top"
     role="navigation"
@@ -58,7 +58,17 @@ const Navbar = () => (
       <div className="navbar-end">
         <div className="navbar-item">
           <div className="buttons">
-            <button className="button is-primary">Log in</button>
+            {user ? (
+              <Link to="/login">
+                <button className="button is-primary" onClick={logout}>
+                  Log Out
+                </button>
+              </Link>
+            ) : (
+              <Link to="/login">
+                <button className="button is-primary">Log In</button>
+              </Link>
+            )}
           </div>
         </div>
       </div>
