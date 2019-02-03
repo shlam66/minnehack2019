@@ -28,10 +28,8 @@ export default class ContractList extends Component {
   render() {
     return (
       <div className="contract-list">
+        <Link to="/contracts/new"><Button className="contract-new-btn" color="primary">Add New Contract</Button></Link>
         {this.renderContracts()}
-        <Link to="/contracts/new">
-          <Button color="primary">Add New Contract</Button>
-        </Link>
       </div>
     )
   }

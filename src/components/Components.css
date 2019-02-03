@@ -22,7 +22,8 @@
 
 #body-div {
   margin-top: 3%;
-  width: 100%;
+  margin-left: -6%;
+  width: 113%; /* This is a bit sloppy, not sure about workaround though.*/
   height: 100%;
   background: url("images/blur-hemp.jpg") no-repeat center center fixed; 
   background-position: center;
@@ -46,6 +47,11 @@
   margin-top: 5%;
   margin-bottom: 10px;
 }
+
+.btn-why {
+  margin-top: 10px;
+}
+
 .login {
   padding: 50px;
 }
@@ -58,6 +64,10 @@
   margin-bottom: 25px;
 }
 
+.contract-new-btn {
+  margin-bottom: 25px;
+}
+
 .contract-new-field {
   border: solid black 2px;
   border-radius: 5px;
@@ -66,3 +76,4 @@
   font-size: medium;
   font-weight: bolder;
 }
+

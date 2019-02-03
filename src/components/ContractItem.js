@@ -1,11 +1,13 @@
 import React from 'react'
+import {Link} from 'react-router-dom'
 import { Card, Media, Image, Content } from 'react-bulma-components/full'
 
 const ContractItem = ({ contract }) => {
+  console.log(contract)
   return (
     <Card>
       <Card.Header>
-        <Card.Header.Title>Title</Card.Header.Title>
+        <Card.Header.Title>Contract</Card.Header.Title>
       </Card.Header>
       <Card.Content>
         <Media>
@@ -23,16 +25,15 @@ const ContractItem = ({ contract }) => {
           </Media.Item>
         </Media>
         <Content>
-          {contract.price}
+          {"$"+contract.price.toLocaleString('en')}
           <br />
-          <time dateTime="2016-1-1">
-            {contract.time} - {contract.date}
-          </time>
+          {contract.farm_id.acres+" acres"}
+          
         </Content>
       </Card.Content>
       <Card.Footer>
-        <Card.Footer.Item>Buy</Card.Footer.Item>
-        <Card.Footer.Item>Email</Card.Footer.Item>
+        <Card.Footer.Item><Link to='/contract/buy'>Buy</Link></Card.Footer.Item>
+        <Card.Footer.Item><a href={`mailto:${contract.lister.email}`}>Email</a></Card.Footer.Item>
       </Card.Footer>
     </Card>
   )
