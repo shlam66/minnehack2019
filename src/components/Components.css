@@ -22,30 +22,31 @@
   color: white;
 }
 
-.black-box-format .small-header, .black-box-text p  {
+.black-box-format .small-header,
+.black-box-text p {
   color: white;
 }
 
 #home-picture-div {
-  background: url("images/blur-hemp.jpg") no-repeat center center fixed;
+  background: url('images/blur-hemp.jpg') no-repeat center center fixed;
   background-position: center;
   background-size: cover;
   position: absolute;
   z-index: -1;
   width: 100%;
   height: 100%;
-  top: -10px; 
+  top: -10px;
 }
 
 #about-picture-div {
-  background: url("images/upclose-hemp.jpg") no-repeat center center fixed;
+  background: url('images/upclose-hemp.jpg') no-repeat center center fixed;
   background-position: center;
   background-size: cover;
   position: absolute;
   z-index: -1;
   width: 100%;
   height: 100%;
-  top: -10px; 
+  top: -10px;
 }
 
 .black-box-text {
