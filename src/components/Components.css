@@ -2,3 +2,9 @@
     width:75%;
     background-color:lightgray;
 }
+
+.personalLogs {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
