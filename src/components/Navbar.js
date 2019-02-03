@@ -34,23 +34,23 @@ const Navbar = () => (
 
     <div id="navbar" className="navbar-menu">
       <div className="navbar-start">
-        <Link to="/" className="navbar-item">
+        <Link to="/" className="navbar-item" onClick={toggleMenu}>
           Home
         </Link>
 
-        <Link to="/about" className="navbar-item">
+        <Link to="/about" className="navbar-item" onClick={toggleMenu}>
           Why Hemp?
         </Link>
 
-        <Link to="/contracts" class="navbar-item">
+        <Link to="/contracts" class="navbar-item" onClick={toggleMenu}>
           Contracts
         </Link>
 
-        <Link to="/logs" class="navbar-item">
+        <Link to="/logs" class="navbar-item" onClick={toggleMenu}>
           Logs
         </Link>
 
-        <Link to="/data" class="navbar-item">
+        <Link to="/data" class="navbar-item" onClick={toggleMenu}>
           Data Sets
         </Link>
       </div>
