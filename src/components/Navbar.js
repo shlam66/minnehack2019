@@ -41,6 +41,18 @@ const Navbar = () => (
           Why Hemp?
         </Link>
 
+        <Link to="/contracts" class="navbar-item">
+          Contracts
+        </Link>
+
+        <Link to="/logs" class="navbar-item">
+          Logs
+        </Link>
+
+        <Link to="/data" class="navbar-item">
+          Data Sets
+        </Link>
+
         <div className="navbar-item has-dropdown is-hoverable">
           <Link to="#" className="navbar-link">
             More

@@ -19,11 +19,13 @@ const AppRouter = () => (
       <div className="container hemp-container">
         <Route path="/" exact component={HomePage} />
         <Route path="/about/" component={About} />
+
         <Route path="/contracts/" exact component={Contracts} />
         <Route path="/contracts/new" component={NewContract} />
 
         <Route path="/logs/" exact component={Logs} />
         <Route path="/logs/new" component={NewLog} />
+        
         <Route path="/data/" component={DataSets} />
       </div>
     </div>
