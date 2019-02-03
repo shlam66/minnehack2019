@@ -1,9 +1,8 @@
 import React from 'react'
-import {Link} from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import { Card, Media, Image, Content } from 'react-bulma-components/full'
 
 const ContractItem = ({ contract }) => {
-  console.log(contract)
   return (
     <Card>
       <Card.Header>
@@ -11,9 +10,8 @@ const ContractItem = ({ contract }) => {
       </Card.Header>
       <Card.Content>
         <Media>
-          <Media.Item renderAs="figure" position="left">
+          <Media.Item position="left">
             <Image
-              renderAs="p"
               size={64}
               alt="64x64"
               src="http://bulma.io/images/placeholders/128x128.png"
@@ -25,15 +23,18 @@ const ContractItem = ({ contract }) => {
           </Media.Item>
         </Media>
         <Content>
-          {"$"+contract.price.toLocaleString('en')}
+          {'$' + contract.price.toLocaleString('en')}
           <br />
-          {contract.farm_id.acres+" acres"}
-          
+          {contract.farm.acres + ' acres'}
         </Content>
       </Card.Content>
       <Card.Footer>
-        <Card.Footer.Item><Link to='/contract/buy'>Buy</Link></Card.Footer.Item>
-        <Card.Footer.Item><a href={`mailto:${contract.lister.email}`}>Email</a></Card.Footer.Item>
+        <Card.Footer.Item>
+          <Link to="/contract/buy">Buy</Link>
+        </Card.Footer.Item>
+        <Card.Footer.Item>
+          <a href={`mailto:${contract.lister.email}`}>Email</a>
+        </Card.Footer.Item>
       </Card.Footer>
     </Card>
   )
