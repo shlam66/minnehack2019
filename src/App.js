@@ -4,9 +4,14 @@ import React, { Component } from 'react'
 // import Navbar from './components/Navbar'
 
 import ContractList from './components/ContractList'
+import Button from './components/Button'
+
+import './components/Components.css'
 
 export default class App extends Component {
   render() {
-    return <ContractList></ContractList>
+    return <div>
+      <ContractList></ContractList>
+    </div>
   }
 }
