@@ -108,3 +108,7 @@
 .is-ancestor {
   border: none;
 }
+
+.contract-card-stats {
+  margin: 50px 0;
+}

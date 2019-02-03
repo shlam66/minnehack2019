@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import './Components.css'
 
 const HomePage = () => (
@@ -9,8 +10,8 @@ const HomePage = () => (
 
     <div>
       <div id="home-picture-div" />
-      <div class="black-box-text">
-        <div class="black-box-format">
+      <div className="black-box-text">
+        <div className="black-box-format">
           <p>
             Hemptation is a service aimed towards farmers to help connect buyers
             and sellers to create an easy and transparent marketplace.{' '}
@@ -23,9 +24,9 @@ const HomePage = () => (
               communicate directly with the buyers. This ensures both parties
               know exactly what they're getting.
             </p>
-            <a href="/contracts">
+            <Link to="/contracts">
               <button className="button is-secondary btn-why">Contracts</button>
-            </a>
+            </Link>
 
             <div className="small-header">Logs</div>
             <p>
@@ -33,9 +34,9 @@ const HomePage = () => (
               what works and what doesn't. Farmers can see other farmers crop
               strategies to increase their own crop yield.
             </p>
-            <a href="/logs">
+            <Link to="/logs">
               <button className="button is-secondary btn-why">Logs</button>
-            </a>
+            </Link>
           </div>
         </div>
       </div>

@@ -10,7 +10,7 @@ const toggleMenu = e => {
 
 const Navbar = ({ user, logout }) => (
   <nav
-    className="navbar is-fixed-top"
+    className="navbar is-fixed-top is-primary"
     role="navigation"
     aria-label="main navigation"
   >
@@ -61,7 +61,7 @@ const Navbar = ({ user, logout }) => (
           <div className="buttons">
             {user ? (
               <Link to="/login">
-                <button className="button is-primary" onClick={logout}>
+                <button className="button is-info" onClick={logout}>
                   Log Out
                 </button>
               </Link>

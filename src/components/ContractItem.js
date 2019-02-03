@@ -23,11 +23,39 @@ const ContractItem = ({ contract }) => {
             </h1>
             <h5 className="subtitle">{contract.farm.acres + ' acres'}</h5>
           </Media.Item>
+          <Media.Item>
+            {contract.lister.name}
+            <br />
+            {contract.lister.email}
+          </Media.Item>
         </Media>
         <Content>
-          {contract.lister.name}
-          <br />
-          {contract.lister.email}
+          <div className="level is-mobile contract-card-stats">
+            <div className="level-item has-text-centered">
+              <div>
+                <p className="heading">Strain</p>
+                <p className="title">{contract.strain.name}</p>
+              </div>
+            </div>
+            <div className="level-item has-text-centered">
+              <div>
+                <p className="heading">Weight</p>
+                <p className="title">{contract.strain.weight}</p>
+              </div>
+            </div>
+            <div className="level-item has-text-centered">
+              <div>
+                <p className="heading">Market Price</p>
+                <p className="title">{contract.strain.market_price}</p>
+              </div>
+            </div>
+            <div className="level-item has-text-centered">
+              <div>
+                <p className="heading">PLanting Time</p>
+                <p className="title">{contract.strain.planting_time}</p>
+              </div>
+            </div>
+          </div>
         </Content>
       </Card.Content>
       <Card.Footer>
