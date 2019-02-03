@@ -5,6 +5,7 @@ import HempLogo from '../assets/HemptationLogo.png'
 
 const toggleMenu = e => {
   e.target.classList.toggle('is-active')
+  document.querySelector('#navbar').classList.toggle('is-active')
 }
 
 const Navbar = () => (
@@ -52,24 +53,6 @@ const Navbar = () => (
         <Link to="/data" class="navbar-item">
           Data Sets
         </Link>
-
-        <div className="navbar-item has-dropdown is-hoverable">
-          <Link to="#" className="navbar-link">
-            More
-          </Link>
-
-          <div className="navbar-dropdown">
-            <Link to="/" className="navbar-item">
-              About
-            </Link>
-            <Link to="/" className="navbar-item">
-              Jobs
-            </Link>
-            <Link to="/" className="navbar-item">
-              Contact
-            </Link>
-          </div>
-        </div>
       </div>
 
       <div className="navbar-end">
