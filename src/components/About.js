@@ -3,7 +3,7 @@ import "./Components.css"
 
 const About = () => (
     <div className="personalLogs">
-        <h1 className="title">Why hemp?</h1>
+        <h1 className="title">Why Hemp?</h1>
 
         The plant has over 25,000 known uses and is 
         potentially an eco-friendly alternative for 
