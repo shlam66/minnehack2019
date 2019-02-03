@@ -66,7 +66,10 @@ const AppRouter = ({
           path="/logs/new"
           render={props => <NewLog {...props} addlog={fetchLogs} />}
         />
-        <Route path="/logs/update/:id" component={LogUpdate} />
+        <Route
+          path="/logs/update/:id"
+          render={props => <LogUpdate {...props} addlog={fetchLogs} />}
+        />
         <Route path="/logs/details/:id" component={LogDetail} />
 
         <Route path="/data/" component={DataSets} />
