@@ -18,14 +18,16 @@ const ContractItem = ({ contract }) => {
             />
           </Media.Item>
           <Media.Item>
-            <h1 className="title">{contract.lister.name}</h1>
-            <h5 className="subtitle">{contract.lister.email}</h5>
+            <h1 className="title">
+              {'$' + contract.price.toLocaleString('en')}
+            </h1>
+            <h5 className="subtitle">{contract.farm.acres + ' acres'}</h5>
           </Media.Item>
         </Media>
         <Content>
-          {'$' + contract.price.toLocaleString('en')}
+          {contract.lister.name}
           <br />
-          {contract.farm.acres + ' acres'}
+          {contract.lister.email}
         </Content>
       </Card.Content>
       <Card.Footer>
