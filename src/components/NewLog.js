@@ -8,6 +8,7 @@ import { Form, Button } from 'react-bulma-components/full'
 class NewLog extends Component {
   state = {
     strain: 'Elektra',
+    farm: 'Farm1',
     date: '',
     plants: '',
     acres: ''

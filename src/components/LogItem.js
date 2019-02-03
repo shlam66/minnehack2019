@@ -2,11 +2,11 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import { Card, Media, Image, Content } from 'react-bulma-components/full'
 
-const ContractItem = ({ contract }) => {
+const LogItem = ({ log }) => {
   return (
     <Card>
       <Card.Header>
-        <Card.Header.Title>Contract</Card.Header.Title>
+        <Card.Header.Title>Log</Card.Header.Title>
       </Card.Header>
       <Card.Content>
         <Media>
@@ -19,14 +19,9 @@ const ContractItem = ({ contract }) => {
           </Media.Item>
           <Media.Item>
             <h1 className="title">
-              {'$' + contract.price.toLocaleString('en')}
+              {'Started on ' + log.datetime}
             </h1>
-            <h5 className="subtitle">{contract.farm.acres + ' acres'}</h5>
-          </Media.Item>
-          <Media.Item>
-            {contract.lister.name}
-            <br />
-            {contract.lister.email}
+            {/* <h5 className="subtitle">{'Started on ' + log.datetime}</h5> */}
           </Media.Item>
         </Media>
         <Content>
@@ -34,25 +29,19 @@ const ContractItem = ({ contract }) => {
             <div className="level-item has-text-centered">
               <div>
                 <p className="heading">Strain</p>
-                <p className="title">{contract.strain.name}</p>
+                <p className="title">{log.strain}</p>
               </div>
             </div>
             <div className="level-item has-text-centered">
               <div>
-                <p className="heading">Weight</p>
-                <p className="title">{contract.strain.weight} lbs</p>
+                <p className="heading">Number of plants</p>
+                <p className="title">{log.num_plants}</p>
               </div>
             </div>
             <div className="level-item has-text-centered">
               <div>
-                <p className="heading">Market Price</p>
-                <p className="title">${contract.strain.market_price} / lbs</p>
-              </div>
-            </div>
-            <div className="level-item has-text-centered">
-              <div>
-                <p className="heading">PLanting Time</p>
-                <p className="title">{contract.strain.planting_time}</p>
+                <p className="heading">Acres used</p>
+                <p className="title">{log.num_acres}</p>
               </div>
             </div>
           </div>
@@ -60,14 +49,14 @@ const ContractItem = ({ contract }) => {
       </Card.Content>
       <Card.Footer>
         <Card.Footer.Item>
-          <Link to="/contracts/accept">Accept</Link>
+          <Link to="/logs/add">Add</Link>
         </Card.Footer.Item>
         <Card.Footer.Item>
-          <a href={`mailto:${contract.lister.email}`}>Email</a>
+          <Link to="/logs/">Delete</Link>
         </Card.Footer.Item>
       </Card.Footer>
     </Card>
   )
 }
 
-export default ContractItem
+export default LogItem
