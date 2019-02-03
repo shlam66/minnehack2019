@@ -9,15 +9,18 @@ import NewContract from './components/NewContract'
 import Logs from './components/Logs'
 import NewLog from './components/NewLog'
 import DataSets from './components/DataSets'
+import Login from './components/Login'
 
 import './App.css'
 
-const AppRouter = () => (
+const AppRouter = ({ user }) => (
   <Router>
     <div>
-      <Navbar />
+      {user && <Navbar />}
       <div className="container hemp-container">
         <Route path="/" exact component={HomePage} />
+        <Route path="/login" component={Login} />
+
         <Route path="/about/" component={About} />
 
         <Route path="/contracts/" exact component={Contracts} />
@@ -25,7 +28,7 @@ const AppRouter = () => (
 
         <Route path="/logs/" exact component={Logs} />
         <Route path="/logs/new" component={NewLog} />
-        
+
         <Route path="/data/" component={DataSets} />
       </div>
     </div>
@@ -33,7 +36,13 @@ const AppRouter = () => (
 )
 
 export default class App extends Component {
+  state = {
+    user: {
+      id: 1,
+      name: 'Marcus Virginia'
+    }
+  }
   render() {
-    return <AppRouter />
+    return <AppRouter user={this.state.user} />
   }
 }
