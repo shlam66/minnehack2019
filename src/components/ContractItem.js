@@ -25,7 +25,9 @@ const ContractItem = ({ contract }) => {
         <Content>
           {contract.price}
           <br />
-          <time dateTime="2016-1-1">11:09 PM - 1 Jan 2016</time>
+          <time dateTime="2016-1-1">
+            {contract.time} - {contract.date}
+          </time>
         </Content>
       </Card.Content>
       <Card.Footer>
