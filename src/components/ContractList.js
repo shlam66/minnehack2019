@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import api from '../api'
+import { Button } from 'react-bulma-components/full'
 
 import ContractItem from './ContractItem'
 import './Components.css'
@@ -24,6 +25,11 @@ export default class ContractList extends Component {
   }
 
   render() {
-    return <div className="contract-list">{this.renderContracts()}</div>
+    return (
+      <div className="contract-list">
+        {this.renderContracts()}
+        <Button color="primary">Add New Contract</Button>
+      </div>
+    )
   }
 }
