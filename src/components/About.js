@@ -37,6 +37,12 @@ const About = () => (
                     information on the best strategies and practices 
                     for growing hemp. Hemptations goal aims towards 
                     informing farmers of the best growing methods.
+                    Growing became legal under U.S. Federal since December 20th. 
+                    If you'd like to learn more about growing hemp in the state of 
+                    Minnesota and the Industrial Hemp Pilot Program, please click below.
+                    <br></br>
+
+                    <a><button className="button is-secondary btn-why">Learn More</button></a>
 
                 </p>
             </div>

@@ -10,7 +10,7 @@ import "./Components.css"
 const ContractBought = () => (
     <div class="personalLogs">
         <h1 className="title">Your request has been recieved!</h1>
-        <p>Your request has been received. Due to the large ammounts of money being 
+        <p>Your request has been received. Due to the large amounts of money being 
             transfered, the payment process will take a while to complete. You should recieve 
             an email when your purchase has been fully processed. Thank you!
         </p>
