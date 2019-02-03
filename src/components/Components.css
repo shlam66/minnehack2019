@@ -1,4 +1,11 @@
+.contractitem-div:hover {
+  border-color: black;
+}
+
 .contractitem-div {
+  border: solid white 3px;
+  border-radius: 25px;
+  margin: 10px auto;
   width: 75%;
   background-color: lightgray;
 }
@@ -19,4 +26,13 @@
 
 .contract-list .card {
   margin-bottom: 25px;
+}
+
+.contract-new-field {
+  border: solid black 2px;
+  border-radius: 5px;
+  min-width: 25%;
+  height: 40px;
+  font-size: medium;
+  font-weight: bolder;
 }

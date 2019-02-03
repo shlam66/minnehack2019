@@ -34,12 +34,6 @@ const ContractItem = ({ contract }) => {
         <Card.Footer.Item>Maybe</Card.Footer.Item>
       </Card.Footer>
     </Card>
-    // <div className="contractitem-div">
-    //     <h1>{contract.name}</h1>
-    //     <h2>{contract.land} Acres</h2>
-    //     <h2>{contract.price}$</h2>
-    //     <h2>{contract.email}</h2>
-    // </div>
   )
 }
 
