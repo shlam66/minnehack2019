@@ -7,7 +7,7 @@ import './components/Components.css'
 import Navbar from './components/Navbar'
 import HomePage from './components/HomePage'
 import About from './components/About'
-import Contracts from './components/Contracts'
+import ContractList from './components/ContractList'
 import NewContract from './components/NewContract'
 
 import Logs from './components/Logs'
@@ -30,7 +30,7 @@ const AppRouter = ({ onLogin, user, login, logout }) => (
 
         <Route path="/about/" component={About} />
 
-        <Route path="/contracts/" exact component={Contracts} />
+        <Route path="/contracts/" exact component={ContractList} />
         <Route path="/contracts/new" component={NewContract} />
 
         <Route path="/logs/" exact component={Logs} />

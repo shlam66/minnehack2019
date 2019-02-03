@@ -1,4 +1,11 @@
+.contractitem-div:hover {
+  border-color: black;
+}
+
 .contractitem-div {
+  border: solid white 3px;
+  border-radius: 25px;
+  margin: 10px auto;
   width: 75%;
   background-color: lightgray;
 }
@@ -9,6 +16,53 @@
   justify-content: center;
 }
 
+#main-header {
+  margin: 2%;
+}
+
+#body-div {
+  margin-top: 3%;
+  width: 100%;
+  height: 100%;
+  background: url("images/blur-hemp.jpg") no-repeat center center fixed; 
+  background-position: center;
+  background-size: cover;
+  opacity: 0.3; 
+  z-index: -1;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+}
+
+#why-hemptation {
+  float: none;
+  margin: 3%;
+  color: black;
+}
+
+.small-header {
+  font-size: 25px;
+  margin-top: 5%;
+  margin-bottom: 10px;
+}
 .login {
   padding: 50px;
+}
+
+.contract-list {
+  padding: 25px;
+}
+
+.contract-list .card {
+  margin-bottom: 25px;
+}
+
+.contract-new-field {
+  border: solid black 2px;
+  border-radius: 5px;
+  min-width: 25%;
+  height: 40px;
+  font-size: medium;
+  font-weight: bolder;
 }
