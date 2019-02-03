@@ -20,7 +20,15 @@ import Login from './components/Login'
 
 import './App.css'
 
-const AppRouter = ({ onLogin, user, login, logout, fetchLogs, logEntries }) => (
+const AppRouter = ({
+  onLogin,
+  user,
+  login,
+  logout,
+  fetchLogs,
+  logEntries,
+  contracts
+}) => (
   <Router>
     <div>
       {onLogin === false && <Navbar user={user} logout={logout} />}
@@ -33,7 +41,11 @@ const AppRouter = ({ onLogin, user, login, logout, fetchLogs, logEntries }) => (
 
         <Route path="/about/" component={About} />
 
-        <Route path="/contracts/" exact component={ContractList} />
+        <Route
+          path="/contracts/"
+          exact
+          render={props => <ContractList {...props} contracts={contracts} />}
+        />
         <Route path="/contracts/new" component={NewContract} />
         <Route path="/contracts/buy" component={ContractBought} />
 
@@ -59,7 +71,8 @@ export default class App extends Component {
   state = {
     user: null,
     onLogin: false,
-    logEntries: null
+    logEntries: null,
+    contracts: null
   }
 
   componentWillMount() {
@@ -67,6 +80,7 @@ export default class App extends Component {
       this.setState({ user: response.data })
     })
     this.fetchLogs()
+    this.fetchContracts()
   }
 
   login = user => {
@@ -83,6 +97,18 @@ export default class App extends Component {
     })
   }
 
+  fetchContracts = () => {
+    api
+      .get('/contracts')
+      .then(response => {
+        this.setState({ contracts: response.data })
+      })
+      .catch(err => {
+        console.log('Error querying the API')
+        console.error(err)
+      })
+  }
+
   render() {
     return (
       <AppRouter
@@ -92,6 +118,7 @@ export default class App extends Component {
         logout={this.logout}
         fetchLogs={this.fetchLogs}
         logEntries={this.state.logEntries}
+        contracts={this.state.contracts}
       />
     )
   }
