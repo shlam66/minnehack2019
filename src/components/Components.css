@@ -22,21 +22,12 @@
   color: white;
 }
 
-<<<<<<< HEAD
 .black-box-format .small-header, .black-box-text p  {
-=======
-#why-hemptation .small-header,
-#home-text-div p {
->>>>>>> 86361b56198839a7d68ab47462bd8b888441f337
   color: white;
 }
 
 #home-picture-div {
-<<<<<<< HEAD
   background: url("images/blur-hemp.jpg") no-repeat center center fixed;
-=======
-  background: url('images/blur-hemp.jpg') no-repeat center center fixed;
->>>>>>> 86361b56198839a7d68ab47462bd8b888441f337
   background-position: center;
   background-size: cover;
   position: absolute;
