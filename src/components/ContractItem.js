@@ -1,4 +1,5 @@
 import React from 'react'
+import api from '../api'
 import { Link } from 'react-router-dom'
 import { Card, Media, Image, Content } from 'react-bulma-components/full'
 
@@ -60,7 +61,7 @@ const ContractItem = ({ contract }) => {
       </Card.Content>
       <Card.Footer>
         <Card.Footer.Item>
-          <Link to="/contracts/accept">Accept</Link>
+          <Link to="/contracts/accept" onClick={()=>api.delete(`/contracts/${contract.id}`)}>Accept</Link>
         </Card.Footer.Item>
         <Card.Footer.Item>
           <a href={`mailto:${contract.lister.email}`}>Email</a>

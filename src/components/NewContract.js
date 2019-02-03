@@ -41,6 +41,7 @@ class NewContract extends Component {
             //These values can be imporved upon (obviously) with using an api
             //or creating our own database for the strands that we support
             weight: Math.floor((Math.random() * 10) + 1),
+            market_price: Math.floor((Math.random() * 10) + 20),
             thc_content: 0.0,
             cbd_content: 20,
             planting_time: "Early October"
