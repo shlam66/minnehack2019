@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { Redirect } from 'react-router-dom'
 import api from '../api'
 import { Button } from 'react-bulma-components/full'
 
@@ -7,7 +8,8 @@ import './Components.css'
 
 export default class ContractList extends Component {
   state = {
-    contracts: null
+    contracts: null,
+    newContract: false
   }
 
   componentWillMount() {
@@ -25,10 +27,16 @@ export default class ContractList extends Component {
   }
 
   render() {
+    if (this.state.newContract) return <Redirect push to="/contract/new" />
     return (
       <div className="contract-list">
         {this.renderContracts()}
-        <Button color="primary">Add New Contract</Button>
+        <Button
+          color="primary"
+          onClick={() => this.setState({ newContract: true })}
+        >
+          Add New Contract
+        </Button>
       </div>
     )
   }
