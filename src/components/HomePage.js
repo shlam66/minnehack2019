@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import './Components.css'
 
 const HomePage = () => (
@@ -23,9 +24,9 @@ const HomePage = () => (
               communicate directly with the buyers. This ensures both parties
               know exactly what they're getting.
             </p>
-            <a href="/contracts">
+            <Link to="/contracts">
               <button className="button is-secondary btn-why">Contracts</button>
-            </a>
+            </Link>
 
             <div className="small-header">Logs</div>
             <p>
@@ -33,9 +34,9 @@ const HomePage = () => (
               what works and what doesn't. Farmers can see other farmers crop
               strategies to increase their own crop yield.
             </p>
-            <a href="/logs">
+            <Link to="/logs">
               <button className="button is-secondary btn-why">Logs</button>
-            </a>
+            </Link>
           </div>
         </div>
       </div>
