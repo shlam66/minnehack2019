@@ -4,7 +4,6 @@ import { Link } from 'react-router-dom'
 import LogItem from './LogItem'
 import { Button } from 'react-bulma-components/full'
 
-
 const renderLogs = (logs, deleteLog) => {
   if (logs) {
     return logs.map(log => {
