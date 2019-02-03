@@ -2,7 +2,7 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import { Card, Media, Image, Content } from 'react-bulma-components/full'
 
-const LogItem = ({ log }) => {
+const LogItem = ({ log, deleteLog }) => {
   return (
     <Card>
       <Card.Header>
@@ -52,7 +52,7 @@ const LogItem = ({ log }) => {
           <Link to="/logs/add">Add</Link>
         </Card.Footer.Item>
         <Card.Footer.Item>
-          <Link to="/logs/">Delete</Link>
+          <buton onClick={() => deleteLog(log.id)}>Delete</buton>
         </Card.Footer.Item>
       </Card.Footer>
     </Card>
