@@ -3,7 +3,8 @@ import React from 'react';
 const ContractItem = ({contract}) => {
     return (
         <div className="contractitem-div" onClick={()=>{
-            window.location = 'mailto:'+contract.email
+            // window.location = 'mailto:'+contract.email
+            alert("Sending email to: "+contract.email)
         }}>
             <h1>{contract.name}</h1>
             <h2>{contract.land} Acres</h2>

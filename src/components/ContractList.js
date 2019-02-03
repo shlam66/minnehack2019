@@ -12,7 +12,7 @@ export default class ContractList extends Component {
   }
 
   renderContracts = () => {
-    console.log(this.state.contracts)
+    // console.log(this.state.contracts)
     if (this.state.contracts != null) {
       return this.state.contracts.map((contract) => {
         // console.log(contract)
