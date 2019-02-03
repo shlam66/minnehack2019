@@ -29,7 +29,7 @@ const ContractItem = ({ contract }) => {
         </Content>
       </Card.Content>
       <Card.Footer>
-        <Card.Footer.Item>View Contract</Card.Footer.Item>
+        <Card.Footer.Item>Buy</Card.Footer.Item>
         <Card.Footer.Item>Email</Card.Footer.Item>
       </Card.Footer>
     </Card>
