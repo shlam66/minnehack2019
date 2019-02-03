@@ -17,7 +17,7 @@ import Login from './components/Login'
 
 import './App.css'
 
-const AppRouter = ({ onLogin, user, login, logout }) => (
+const AppRouter = ({ onLogin, user, login, logout, fetchLogs, logEntries }) => (
   <Router>
     <div>
       {onLogin === false && <Navbar user={user} logout={logout} />}
@@ -33,8 +33,15 @@ const AppRouter = ({ onLogin, user, login, logout }) => (
         <Route path="/contracts/" exact component={ContractList} />
         <Route path="/contracts/new" component={NewContract} />
 
-        <Route path="/logs/" exact component={Logs} />
-        <Route path="/logs/new" component={NewLog} />
+        <Route
+          path="/logs/"
+          exact
+          render={props => <Logs {...props} logs={logEntries} />}
+        />
+        <Route
+          path="/logs/new"
+          render={props => <NewLog {...props} addLog={fetchLogs} />}
+        />
 
         <Route path="/data/" component={DataSets} />
       </div>
@@ -43,10 +50,17 @@ const AppRouter = ({ onLogin, user, login, logout }) => (
 )
 
 export default class App extends Component {
+  state = {
+    user: null,
+    onLogin: false,
+    logEntries: null
+  }
+
   componentWillMount() {
     api.get('/owners/1').then(response => {
       this.setState({ user: response.data })
     })
+    this.fetchLogs()
   }
 
   login = user => {
@@ -57,9 +71,11 @@ export default class App extends Component {
     this.setState({ user: null })
   }
 
-  state = {
-    user: null,
-    onLogin: false
+  fetchLogs = () => {
+    api.get('/log_entries').then(response => {
+      this.setState({ logEntries: response.data })
+      console.log(response.data)
+    })
   }
 
   render() {
@@ -69,6 +85,8 @@ export default class App extends Component {
         onLogin={this.state.onLogin}
         login={this.login}
         logout={this.logout}
+        fetchLogs={this.fetchLogs}
+        logEntries={this.state.logEntries}
       />
     )
   }
