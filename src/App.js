@@ -27,7 +27,8 @@ const AppRouter = ({
   logout,
   fetchLogs,
   logEntries,
-  contracts
+  contracts,
+  deleteLog
 }) => (
   <Router>
     <div>
@@ -54,7 +55,9 @@ const AppRouter = ({
         <Route
           path="/logs/"
           exact
-          render={props => <Logs {...props} logs={logEntries} />}
+          render={props => (
+            <Logs {...props} logs={logEntries} deleteLog={deleteLog} />
+          )}
         />
         <Route
           path="/logs/new"
@@ -123,6 +126,7 @@ export default class App extends Component {
         fetchLogs={this.fetchLogs}
         logEntries={this.state.logEntries}
         contracts={this.state.contracts}
+        deleteLog={this.deleteLog}
       />
     )
   }
