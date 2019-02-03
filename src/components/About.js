@@ -3,7 +3,7 @@ import './Components.css'
 
 const About = () => (
   <div className="personalLogs">
-    <h1 id="main-header" className="main-header" className="title">
+    <h1 id="main-header" className="main-header title">
       Why Hemp?
     </h1>
 
