@@ -69,10 +69,10 @@ class NewLog extends Component {
           <Form.Label>Select the Strain:</Form.Label>
           <Form.Control>
             <Dropdown value={this.state.strain} onChange={this.onChange}>
-              <Dropdown.Item value="elektra">Elektra</Dropdown.Item>
-              <Dropdown.Item value="cherrywine">Cherry Wine</Dropdown.Item>
-              <Dropdown.Item value="suverhaze">Suver Haze</Dropdown.Item>
-              <Dropdown.Item value="cobbler">Cobbler</Dropdown.Item>
+              <Dropdown.Item value="Elektra">Elektra</Dropdown.Item>
+              <Dropdown.Item value="Cherry Wine">Cherry Wine</Dropdown.Item>
+              <Dropdown.Item value="Suver Haze">Suver Haze</Dropdown.Item>
+              <Dropdown.Item value="Cobbler">Cobbler</Dropdown.Item>
             </Dropdown>
             <br />
           </Form.Control>

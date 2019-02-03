@@ -5,17 +5,17 @@ import LogItem from './LogItem'
 import { Button } from 'react-bulma-components/full'
 
 
-const renderLogs = logs => {
+const renderLogs = (logs, deleteLog) => {
   if (logs) {
     return logs.map(log => {
-      return <LogItem log={log} key={log.id} />
+      return <LogItem log={log} key={log.id} deleteLog={deleteLog} />
     })
   } else {
     return <h1>Unable to load any logs, there may be none...</h1>
   }
 }
 
-const Logs = ({ logs }) => {
+const Logs = ({ logs, deleteLog }) => {
   return (
     <div className="contract-list">
       <h1 className="title">Personal Logs</h1>
@@ -25,7 +25,7 @@ const Logs = ({ logs }) => {
           Add New Log
         </Button>
       </Link>
-      {renderLogs(logs)}
+      {renderLogs(logs, deleteLog)}
     </div>
   )
 }
