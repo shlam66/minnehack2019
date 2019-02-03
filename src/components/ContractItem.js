@@ -29,9 +29,8 @@ const ContractItem = ({ contract }) => {
         </Content>
       </Card.Content>
       <Card.Footer>
-        <Card.Footer.Item>Yes</Card.Footer.Item>
-        <Card.Footer.Item>No</Card.Footer.Item>
-        <Card.Footer.Item>Maybe</Card.Footer.Item>
+        <Card.Footer.Item>View Contract</Card.Footer.Item>
+        <Card.Footer.Item>Email</Card.Footer.Item>
       </Card.Footer>
     </Card>
   )
