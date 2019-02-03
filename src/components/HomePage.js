@@ -10,8 +10,8 @@ const HomePage = () => (
 
     <div>
       <div id="home-picture-div" />
-      <div id="home-text-div">
-        <div id="why-hemptation">
+      <div class="black-box-text">
+        <div class="black-box-format">
           <p>
             Hemptation is a service aimed towards farmers to help connect buyers
             and sellers to create an easy and transparent marketplace.{' '}

@@ -22,31 +22,43 @@
   color: white;
 }
 
-#why-hemptation .small-header,
-#home-text-div p {
+.black-box-format .small-header, .black-box-text p  {
   color: white;
 }
 
 #home-picture-div {
-  background: url('images/blur-hemp.jpg') no-repeat center center fixed;
+  background: url("images/blur-hemp.jpg") no-repeat center center fixed;
   background-position: center;
   background-size: cover;
   position: absolute;
   z-index: -1;
   width: 100%;
   height: 100%;
-  top: -10px;
+  top: -10px; 
 }
 
-#home-text-div {
-  margin: 10%;
+#about-picture-div {
+  background: url("images/upclose-hemp.jpg") no-repeat center center fixed;
+  background-position: center;
+  background-size: cover;
+  position: absolute;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  top: -10px; 
+}
+
+.black-box-text {
+  margin-left: 10%;
+  margin-right: 10%;
+  margin-top: 2%;
   border: solid white 2px;
   border-radius: 20px;
   background-color: rgba(0, 0, 0, 0.5);
   color: white;
 }
 
-#why-hemptation {
+.black-box-format {
   float: none;
   margin: 3%;
   color: black;
