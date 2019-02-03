@@ -51,10 +51,6 @@ const Navbar = ({ user, logout }) => (
           Logs
         </Link>
 
-        <Link to="/data" className="navbar-item" onClick={toggleMenu}>
-          Minnesota Hemp
-        </Link>
-
         <Link to="/next" className="navbar-item" onClick={toggleMenu}>
           What's Next
         </Link>
