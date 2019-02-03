@@ -49,10 +49,13 @@ const LogItem = ({ log, deleteLog }) => {
       </Card.Content>
       <Card.Footer>
         <Card.Footer.Item>
-          <Link to="/logs/add">Add</Link>
+          <Link to="/logs/update" renderAs="button" className="button is-primary">Update</Link>
         </Card.Footer.Item>
         <Card.Footer.Item>
-          <buton onClick={() => deleteLog(log.id)}>Delete</buton>
+          <Link to="/logs/details" renderAs="button" className="button is-primary">See Details</Link>
+        </Card.Footer.Item>
+        <Card.Footer.Item>
+          <button onClick={() => deleteLog(log.id)} className="button is-primary">Delete</button>
         </Card.Footer.Item>
       </Card.Footer>
     </Card>

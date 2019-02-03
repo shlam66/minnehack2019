@@ -25,6 +25,7 @@ const Logs = ({ logs, deleteLog }) => {
           Add New Log
         </Button>
       </Link>
+      <br />
       {renderLogs(logs, deleteLog)}
     </div>
   )

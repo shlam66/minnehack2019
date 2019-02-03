@@ -15,6 +15,9 @@ import ContractAccepted from './components/ContractAccepted'
 
 import Logs from './components/Logs'
 import NewLog from './components/NewLog'
+import LogUpdate from './components/LogUpdate'
+import LogDetail from './components/LogDetail'
+
 import DataSets from './components/DataSets'
 import Login from './components/Login'
 
@@ -63,6 +66,8 @@ const AppRouter = ({
           path="/logs/new"
           render={props => <NewLog {...props} addlog={fetchLogs} />}
         />
+        <Route path="/logs/update" component={LogUpdate} />
+        <Route path="/logs/details" component={LogDetail} />
 
         <Route path="/data/" component={DataSets} />
       </div>
