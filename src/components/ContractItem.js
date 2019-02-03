@@ -40,13 +40,13 @@ const ContractItem = ({ contract }) => {
             <div className="level-item has-text-centered">
               <div>
                 <p className="heading">Weight</p>
-                <p className="title">{contract.strain.weight}</p>
+                <p className="title">{contract.strain.weight} lbs</p>
               </div>
             </div>
             <div className="level-item has-text-centered">
               <div>
                 <p className="heading">Market Price</p>
-                <p className="title">{contract.strain.market_price}</p>
+                <p className="title">${contract.strain.market_price} / lbs</p>
               </div>
             </div>
             <div className="level-item has-text-centered">
@@ -60,7 +60,7 @@ const ContractItem = ({ contract }) => {
       </Card.Content>
       <Card.Footer>
         <Card.Footer.Item>
-          <Link to="/contracts/buy">Buy</Link>
+          <Link to="/contracts/accept">Accept</Link>
         </Card.Footer.Item>
         <Card.Footer.Item>
           <a href={`mailto:${contract.lister.email}`}>Email</a>

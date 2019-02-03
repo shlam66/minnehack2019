@@ -11,7 +11,7 @@ import WhatsNext from './components/WhatsNext'
 
 import ContractList from './components/ContractList'
 import NewContract from './components/NewContract'
-import ContractBought from './components/ContractBought'
+import ContractAccepted from './components/ContractAccepted'
 
 import Logs from './components/Logs'
 import NewLog from './components/NewLog'
@@ -47,7 +47,7 @@ const AppRouter = ({
           render={props => <ContractList {...props} contracts={contracts} />}
         />
         <Route path="/contracts/new" component={NewContract} />
-        <Route path="/contracts/buy" component={ContractBought} />
+        <Route path="/contracts/accept" component={ContractAccepted} />
 
         <Route path="/next" component={WhatsNext} />
 
@@ -107,6 +107,10 @@ export default class App extends Component {
         console.log('Error querying the API')
         console.error(err)
       })
+  }
+
+  deleteLog = id => {
+    api.delete(`/log_entries/${id}`).then(() => this.fetchLogs())
   }
 
   render() {

@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 import './Components.css'
 
 const HomePage = () => (
-  <div className="personalLogs">
+  <div className="home-container">
     <h1 id="main-header" className="title">
       Welcome to Hemptation!
     </h1>
