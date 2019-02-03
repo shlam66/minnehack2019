@@ -109,6 +109,10 @@ export default class App extends Component {
       })
   }
 
+  deleteLog = id => {
+    api.delete(`/log_entries/${id}`).then(() => this.fetchLogs())
+  }
+
   render() {
     return (
       <AppRouter
