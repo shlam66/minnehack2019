@@ -30,7 +30,7 @@ const ContractItem = ({ contract }) => {
       </Card.Content>
       <Card.Footer>
         <Card.Footer.Item>
-          <Link to="/contract/buy">Buy</Link>
+          <Link to="/contracts/buy">Buy</Link>
         </Card.Footer.Item>
         <Card.Footer.Item>
           <a href={`mailto:${contract.lister.email}`}>Email</a>
