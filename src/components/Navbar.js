@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 import HempLogo from '../assets/HemptationLogo.png'
 
 const toggleMenu = e => {
-  e.target.classList.toggle('is-active')
+  document.querySelector('#burger').classList.toggle('is-active')
   document.querySelector('#navbar').classList.toggle('is-active')
 }
 
@@ -15,12 +15,13 @@ const Navbar = ({ user, logout }) => (
     aria-label="main navigation"
   >
     <div className="navbar-brand">
-      <div className="navbar-item">
+      <Link className="navbar-item" to="/">
         <img src={HempLogo} width="112" height="28" alt="Hemptation Logo" />
-      </div>
+      </Link>
 
       <div
         className="navbar-burger burger"
+        id="burger"
         aria-label="menu"
         aria-expanded="false"
         data-target="navbar"

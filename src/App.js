@@ -80,7 +80,6 @@ export default class App extends Component {
   fetchLogs = () => {
     api.get('/log_entries').then(response => {
       this.setState({ logEntries: response.data })
-      console.log(response.data)
     })
   }
 
