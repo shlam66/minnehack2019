@@ -7,8 +7,11 @@ import './components/Components.css'
 import Navbar from './components/Navbar'
 import HomePage from './components/HomePage'
 import About from './components/About'
+import WhatsNext from './components/WhatsNext'
+
 import ContractList from './components/ContractList'
 import NewContract from './components/NewContract'
+import ContractBought from './components/ContractBought'
 
 import Logs from './components/Logs'
 import NewLog from './components/NewLog'
@@ -32,6 +35,9 @@ const AppRouter = ({ onLogin, user, login, logout, fetchLogs, logEntries }) => (
 
         <Route path="/contracts/" exact component={ContractList} />
         <Route path="/contracts/new" component={NewContract} />
+        <Route path="/contracts/buy" component={ContractBought} />
+
+        <Route path="/next" component={WhatsNext} />
 
         <Route
           path="/logs/"

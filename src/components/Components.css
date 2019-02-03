@@ -20,20 +20,27 @@
   margin: 2%;
 }
 
-#body-div {
-  margin-top: 3%;
-  margin-left: -6%;
-  width: 113%; /* This is a bit sloppy, not sure about workaround though.*/
-  height: 100%;
+#why-hemptation .small-header, #home-text-div p  {
+  color: white;
+}
+
+#home-picture-div {
   background: url("images/blur-hemp.jpg") no-repeat center center fixed; 
   background-position: center;
   background-size: cover;
-  opacity: 0.3; 
-  z-index: -1;
   position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 0;
+  z-index: -1;
+
+  width: 100%;
+  height: 100%;
+}
+
+#home-text-div {
+  margin: 10%;
+  border: solid white 2px;
+  border-radius: 20px;
+  background-color: rgba(0,0,0,0.5);
+  color: white;
 }
 
 #why-hemptation {
@@ -75,5 +82,15 @@
   height: 40px;
   font-size: medium;
   font-weight: bolder;
+}
+
+.is-child {
+  border: solid 5px lightgreen;
+  border-radius: 5px;
+  margin: -12px;
+}
+
+.is-ancestor {
+  border: none;
 }
 

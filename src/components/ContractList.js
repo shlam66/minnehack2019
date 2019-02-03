@@ -12,9 +12,16 @@ export default class ContractList extends Component {
   }
 
   componentWillMount() {
-    api.get('/contracts').then(response => {
-      this.setState({ contracts: response.data })
-    })
+    try{
+      api.get('/contracts').then(response => {
+        this.setState({ contracts: response.data })
+      })
+    }
+    catch(err){
+      console.log("Error querying the API");
+      console.error(err);
+    }
+    
   }
 
   renderContracts = () => {
@@ -22,6 +29,10 @@ export default class ContractList extends Component {
       return this.state.contracts.map(contract => {
         return <ContractItem contract={contract} key={contract.id} />
       })
+    }
+    else
+    {
+      return <h1>Unable to load any contracts, there may be none...</h1>
     }
   }
 

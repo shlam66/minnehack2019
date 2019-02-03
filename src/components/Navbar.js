@@ -53,6 +53,10 @@ const Navbar = ({ user, logout }) => (
         <Link to="/data" className="navbar-item" onClick={toggleMenu}>
           Minnesota Hemp
         </Link>
+
+        <Link to="/next" className="navbar-item" onClick={toggleMenu}>
+          What's Next
+        </Link>
       </div>
 
       <div className="navbar-end">
